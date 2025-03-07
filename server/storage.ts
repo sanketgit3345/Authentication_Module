@@ -5,11 +5,11 @@ import MySQLStore from "express-mysql-session";
 
 // MySQL connection configuration
 const dbConfig = {
-  host: process.env.DB_HOST,
+  host: process.env.DB_HOST,  // Use the provided host from environment
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  port: Number(process.env.DB_PORT)
+  port: 3306  // Using standard MySQL port
 };
 
 console.log('Attempting to connect to MySQL with config:', {
